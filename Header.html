@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="main-header">
+    <a href="https://thomann.maktechinstitute.com">
+      <div class="logo">Thomann</div>
+    </a>
+
+    <div class="header-controls">
+      <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" id="mobile-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span class="menu-text">MENU</span>
+        <div class="nav-search-container">
+          <a href="#" class="search-trigger" id="mobileSearchTriggerBtn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+          <div class="search-dropdown-box" id="searchDropdownForm">
+            <form action="#" method="get" class="search-form-inner">
+              <input type="text" name="s" placeholder="Suchbegriffe..." class="search-input-field" autocomplete="off">
+            </form>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="https://thomann.maktechinstitute.com/stahl/">Stahl</a>
+          <ul class="sub-menu" role="group" aria-hidden="true">
+            <li><a href="https://thomann.maktechinstitute.com/gitterroste/" class="menu-link">Aluminium</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/laufschienen/" class="menu-link">Buntmetalle</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Edelstahl</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Rohre</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Träger</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="https://thomann.maktechinstitute.com/dach-und-wand/">Dach und Wand</a>
+          <ul class="sub-menu" role="group" aria-hidden="true">
+            <li><a href="https://thomann.maktechinstitute.com/gitterroste/" class="menu-link">Gitterroste</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/laufschienen/" class="menu-link">Laufschienen</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Metallzäune</a></li>
+          </ul>
+        </li>
+
+        <li><a href="https://thomann.maktechinstitute.com/heizol-und-pellets/">Heizöl und Pellets</a></li>
+        <li><a href="https://thomann.maktechinstitute.com/schulungen/">Schulungen</a></li>
+        <li><a href="https://thomann.maktechinstitute.com/karriere/">Karriere</a></li>
+        <li><a href="https://thomann.maktechinstitute.com/uber-uns-2/">Über uns</a></li>
+
+        <li>
+          <a href="https://thomann.maktechinstitute.com/kontakt/">Kontakt</a>
+          <ul class="sub-menu" role="group" aria-hidden="true">
+            <li><a href="https://thomann.maktechinstitute.com/gitterroste/" class="menu-link">Außendienst</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/laufschienen/" class="menu-link">Geschäftsführung</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Heizöl, Brennstoffe</a>
+            </li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Organisation und
+                Finanzen</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Personal</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">QM</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Stahl</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Telefonzentrale</a></li>
+            <li><a href="https://thomann.maktechinstitute.com/metallzaune/" class="menu-link">Warenanlieferung</a></li>
+          </ul>
+        </li>
+
+        <!-- Desktop search -->
+        <ul>
+          <li class="nav-search-container">
+            <button type="button" class="search-trigger" id="desktopSearchTriggerBtn" aria-label="Open search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+            <form action="/search" method="GET" class="search-form" id="searchForm" aria-hidden="true">
+              <div class="search-input-wrapper">
+                <input type="search" name="q" placeholder="Search..." class="search-input" id="searchInput"
+                  tabindex="-1" />
+                <button type="button" class="search-close" id="searchCloseBtn" aria-label="Close search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </ul>
+    </nav>
+  </header>
+
+  <style>
+    #desktopSearchTriggerBtn,
+    #desktopSearchTriggerBtn:hover,
+    #desktopSearchTriggerBtn:focus,
+    #desktopSearchTriggerBtn:active,
+    #desktopSearchTriggerBtn:focus-visible {
+      background: transparent !important;
+      background-color: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    #searchCloseBtn,
+    #searchCloseBtn:hover,
+    #searchCloseBtn:focus,
+    #searchCloseBtn:active,
+    #searchCloseBtn:focus-visible {
+      background: transparent !important;
+      background-color: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    @font-face {
+      font-family: 'ThomannRepro';
+      src: url('/wp-content/themes/your-theme/fonts/ThomannRepro-BlackItalic.woff2') format('woff2'),
+        url('/wp-content/themes/your-theme/fonts/ThomannRepro-BlackItalic.woff') format('woff');
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    #main-header .logo {
+      /*font-family: ThomannRepro, sans-serif;*/
+      font-weight: 900;
+      font-style: italic;
+      text-transform: Logo;
+      letter-spacing: 2px;
+      font-size: 90px !important;
+    }
+
+
+    /* DELETE THESE — they're not inside any rule: */
+    font-family: ThomannRepro,
+    sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 72px;
+
+    #desktopSearchTriggerBtn,
+    #desktopSearchTriggerBtn:hover,
+    #desktopSearchTriggerBtn:focus,
+    #desktopSearchTriggerBtn:active,
+    #desktopSearchTriggerBtn:focus-visible {
+      background: transparent !important;
+      background-color: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    #searchCloseBtn,
+    #searchCloseBtn:hover,
+    #searchCloseBtn:focus,
+    #searchCloseBtn:active,
+    #searchCloseBtn:focus-visible {
+      background: transparent !important;
+      background-color: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .elementor-7681 .elementor-element.elementor-element-eadf088 {
+      --display: flex;
+      --flex-direction: column;
+      --container-widget-width: 100%;
+      --container-widget-height: initial;
+      --container-widget-flex-grow: 0;
+      --container-widget-align-self: initial;
+      --flex-wrap-mobile: wrap;
+      --margin-top: -10vh;
+      --margin-bottom: ;
+      --margin-left: 0px;
+      --margin-right: 0px;
+    }
+
+
+    /* Hide mobile-only elements on desktop */
+    @media screen and (min-width: 992px) {
+
+      #mobile-nav-close,
+      .mobile-chevron-btn,
+      #mobile-nav-overlay {
+        display: none !important;
+      }
+    }
+
+    /* ─── RESET & BASE ─── */
+    * {
+      box-sizing: border-box;
+    }
+
+    .mobile-toggle {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-toggle:hover,
+    .mobile-toggle:focus,
+    .mobile-toggle:active,
+    .mobile-toggle:focus-visible {
+      background: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    /* ─── HEADER ─── */
+    #main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      /* background-color: red; */
+      z-index: 9999;
+      transition: all 0.4s ease;
+      
+    }
+
+    #main-header.scrolled {
+      height: 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ─── LOGO ─── */
+    #main-header .logo {
+      font-family: revert;
+      font-size: 75px !important;
+      font-weight: 900 !important;
+      font-style: italic;
+      color: #ffffff;
+      letter-spacing: -1px;
+      transition: all 0.4s ease;
+      z-index: 10001;
+      height: 100px !important;
+    }
+
+    #main-header.scrolled .logo {
+      font-size: 30px;
+      color: #0246CC !important;
+      margin-top: 74px !important;
+      font-weight: 900 !important;
+    }
+
+
+    /* ─── HEADER CONTROLS (mobile toggle area) ─── */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 15px 20px;
+      color: #ffffff;
+    }
+
+    .mobile-toggle {
+      display: none;
+      align-items: center;
+      gap: 15px;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0;
+      z-index: 10001;
+      transition: color 0.4s ease;
+    }
+
+    #main-header.scrolled .mobile-toggle {
+      color: #1c3d6e;
+    }
+
+    .menu-text {
+      font-family: sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    /* ─── DESKTOP NAV ─── */
+    #main-nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    #main-nav a {
+      font-family: ThomannRepro, sans-serif;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.4s ease;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    #main-header.scrolled #main-nav a {
+      color: #1c3d6e;
+    }
+
+    #main-nav a:hover {
+      color: #0044cc !important;
+    }
+
+    /* ─── DESKTOP DROPDOWNS ─── */
+    #main-nav ul li {
+      position: relative;
+    }
+
+    #main-nav ul li .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 10002;
+      border-radius: 4px;
+    }
+
+    #main-nav ul li:last-child .sub-menu {
+      left: auto !important;
+      right: 0 !important;
+    }
+
+    #main-nav ul li .sub-menu li {
+      margin: 0;
+    }
+
+    #main-nav ul li .sub-menu li a {
+      display: block;
+      padding: 10px 20px;
+      color: #004b87;
+      white-space: nowrap;
+      font-size: 14px !important;
+    }
+
+    #main-nav ul li .sub-menu li a:hover {
+      background-color: #f5f5f5;
+      color: #002d52;
+    }
+
+    #main-nav ul li:hover>.sub-menu {
+      display: block !important;
+    }
+
+    /* ─── DESKTOP SEARCH ─── */
+    .nav-search-container {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    .search-trigger,
+    .search-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 20px;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+    }
+
+    .search-trigger {
+      color: #fff;
+    }
+
+    #main-header.scrolled .search-trigger {
+      color: #1c3d6e;
+    }
+
+    .search-trigger:hover,
+    .search-close:hover {
+      opacity: 0.7;
+    }
+
+    .search-form {
+      position: fixed !important;
+      top: 50px;
+      right: 60px;
+      left: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 4px 8px;
+      z-index: 99999;
+      min-width: 260px;
+      transform: translateX(15px);
+    }
+
+    .search-form.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .search-input-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      padding: 6px 4px;
+      width: 200px;
+      background: transparent;
+    }
+
+    /* ─── MOBILE SEARCH DROPDOWN ─── */
+    .search-dropdown-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      width: 90vw;
+      max-width: 340px;
+      background-color: #ffffff;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+    }
+
+    .search-dropdown-box.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .search-form-inner {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+    }
+
+    .search-input-field {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-input-field::placeholder {
+      color: #8a8a8a;
+    }
+
+    /* ─── HEADER IMAGE ─── */
+    #main-header img {
+      width: 400px;
+      height: auto;
+      transition: all 0.4s ease;
+    }
+
+    #main-header.scrolled img {
+      width: 250px;
+    }
+
+    /* ── Logo: stay inside the header at all times ── */
+    #main-header .logo {
+      height: auto !important;
+      /* remove the fixed 120px height */
+      line-height: 1 !important;
+      display: flex !important;
+      align-items: center !important;
+      margin-top: 0 !important;
+    }
+
+    #main-header.scrolled .logo {
+      margin-top: 0 !important;
+      /* remove the 74px push-down */
+      font-size: 26px !important;
+      height: auto !important;
+      line-height: 40px !important;
+      /* match the 40px scrolled header */
+    }
+
+    @media screen and (max-width: 991px) {
+      #main-header .logo {
+        font-size: 24px !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        line-height: 50px !important;
+        /* match the 50px mobile header */
+      }
+
+      #main-header.scrolled .logo {
+        font-size: 20px !important;
+        margin-top: 0 !important;
+        line-height: 40px !important;
+      }
+    }
+
+    /* ══════════════════════════════════════════════
+       MOBILE STYLES  (≤ 991px)
+    ══════════════════════════════════════════════ */
+    @media screen and (max-width: 991px) {
+
+      #main-header {
+        padding: 0 20px;
+        height: 50px;
+      }
+
+      #main-header .logo {
+        font-size: 28px;
+        height: 36px !important;
+      }
+
+
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      /* ── Dark overlay behind the drawer ── */
+      #mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        cursor: pointer;
+      }
+
+      #mobile-nav-overlay.active {
+        display: block;
+      }
+
+      /* ── Right-side drawer panel ── */
+      #main-nav {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+        width: 36% !important;
+        max-width: 420px !important;
+        height: 80vh !important;
+        overflow-y: auto !important;
+        background-color: #ffffff !important;
+        padding: 0 !important;
+        transform: translateX(100%) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: transform 0.35s ease !important;
+        z-index: 9999 !important;
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.18) !important;
+      }
+
+      #main-nav.active {
+        transform: translateX(0) !important;
+      }
+
+      /* ── X close button (top-right of drawer) ── */
+      #mobile-nav-close {
+        position: sticky !important;
+        top: 0 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        padding: 14px 18px !important;
+        background: #ffffff !important;
+        border: none !important;
+        cursor: pointer !important;
+        width: 100% !important;
+        z-index: 10 !important;
+        border-bottom: 1px solid #eeeeee !important;
+      }
+
+      #mobile-nav-close svg {
+        display: block !important;
+        color: #111111 !important;
+      }
+
+      /* ── Nav ul: vertical column ── */
+      #main-nav>ul {
+        flex-direction: column !important;
+        gap: 0 !important;
+        text-align: left !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      /* ── Each top-level li ── */
+      #main-nav>ul>li {
+        width: 100% !important;
+        display: flex !important;
+        align-items: stretch !important;
+        border-bottom: 1px solid #dedede !important;
+        margin: 0 !important;
+        position: relative !important;
+        flex-wrap: wrap !important;
+      }
+
+      /* ── Main link ── */
+      #main-nav>ul>li>a {
+
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 10px 10px !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #111111 !important;
+        text-decoration: none !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      }
+
+
+      #main-nav>ul>li>a:hover {
+        color: #0044cc !important;
+      }
+
+      /* ── Chevron button (pipe + arrow) ── */
+      .mobile-chevron-btn {
+
+        display: flex !important;
+        align-items: center !important;
+        padding: 6px 8px !important;
+        background: transparent !important;
+        border: none !important;
+        border-left: 1px solid #dedede !important;
+        cursor: pointer !important;
+        color: #111111 !important;
+        flex-shrink: 0 !important;
+
+      }
+
+      .mobile-chevron-btn svg {
+        transition: transform 0.25s ease !important;
+        display: block !important;
+      }
+
+      .mobile-chevron-btn.open svg {
+        transform: rotate(180deg) !important;
+      }
+
+      /* ── Submenus: hidden, accordion ── */
+      #main-nav>ul>li>.sub-menu {
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        background-color: #f7f7f7 !important;
+        padding: 0 !important;
+        min-width: unset !important;
+        max-width: unset !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+
+      #main-nav>ul>li>.sub-menu.mobile-open {
+        display: block !important;
+      }
+
+      #main-nav>ul>li>.sub-menu li {
+        margin: 0 !important;
+        border-bottom: 1px solid #ebebeb !important;
+      }
+
+      #main-nav>ul>li>.sub-menu li:last-child {
+        border-bottom: none !important;
+      }
+
+      #main-nav>ul>li>.sub-menu li a {
+        display: block !important;
+        padding: 14px 24px 14px 36px !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #333333 !important;
+        white-space: normal !important;
+      }
+
+      #main-nav>ul>li>.sub-menu li a:hover {
+        background-color: #efefef !important;
+        color: #0044cc !important;
+      }
+
+      /* ── Hide desktop search ul on mobile ── */
+      #main-nav>ul>ul {
+        display: none !important;
+      }
+
+      /* ── Hover dropdowns disabled on mobile ── */
+      #main-nav ul li:hover>.sub-menu {
+        display: none !important;
+      }
+
+      #main-nav>ul>li>.sub-menu.mobile-open {
+        display: block !important;
+      }
+    }
+  </style>
+
+  <!-- ══ DASHBOARD MESSAGE ══ -->
+  <script>
+    window.showDashboardMessage = function () {
+      console.log("Search clicked");
+      let msgAlert = document.getElementById('dashboard-toast');
+      if (!msgAlert) {
+        msgAlert = document.createElement('div');
+        msgAlert.id = 'dashboard-toast';
+        document.body.appendChild(msgAlert);
+        setTimeout(() => { if (msgAlert) msgAlert.remove(); }, 3000);
+      }
+    };
+  </script>
+
+  <!-- ══ DESKTOP SEARCH ══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var searchTriggerBtn = document.getElementById('desktopSearchTriggerBtn');
+      var searchCloseBtn = document.getElementById('searchCloseBtn');
+      var searchForm = document.getElementById('searchForm');
+      var searchInput = document.getElementById('searchInput');
+
+      if (!searchTriggerBtn || !searchCloseBtn || !searchForm || !searchInput) return;
+
+      function openSearch() {
+        window.showDashboardMessage();
+        searchForm.classList.add('is-active');
+        searchForm.setAttribute('aria-hidden', 'false');
+        searchInput.setAttribute('tabindex', '0');
+        setTimeout(function () { searchInput.focus(); }, 100);
+      }
+      function closeSearch() {
+        searchForm.classList.remove('is-active');
+        searchForm.setAttribute('aria-hidden', 'true');
+        searchInput.setAttribute('tabindex', '-1');
+        searchInput.value = '';
+        searchTriggerBtn.focus();
+      }
+
+      searchTriggerBtn.addEventListener('click', function (e) { e.preventDefault(); openSearch(); });
+      searchCloseBtn.addEventListener('click', function (e) { e.preventDefault(); closeSearch(); });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && searchForm.classList.contains('is-active')) closeSearch();
+      });
+      document.addEventListener('click', function (e) {
+        if (!searchForm.contains(e.target) && !searchTriggerBtn.contains(e.target) && searchForm.classList.contains('is-active')) {
+          closeSearch();
+        }
+      });
+    });
+  </script>
+
+  <!-- ══ MOBILE SEARCH DROPDOWN ══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var triggerBtn = document.getElementById('mobileSearchTriggerBtn');
+      var dropdownForm = document.getElementById('searchDropdownForm');
+      if (!triggerBtn || !dropdownForm) return;
+      var inputField = dropdownForm.querySelector('.search-input-field');
+
+      triggerBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.showDashboardMessage();
+        dropdownForm.classList.toggle('active');
+        if (dropdownForm.classList.contains('active') && inputField) {
+          setTimeout(function () { inputField.focus(); }, 100);
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!triggerBtn.contains(e.target) && !dropdownForm.contains(e.target)) {
+          dropdownForm.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- ══ SCROLL + HEADER SHRINK ══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.getElementById('main-header');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+
+  <!-- ══ MOBILE MENU — DRAWER + OVERLAY + ACCORDION ══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var header = document.getElementById('main-header');
+      var mainNav = document.getElementById('main-nav');
+      var mobileToggle = document.getElementById('mobile-toggle');
+
+      if (!mainNav || !mobileToggle) return;
+
+      /* ── 1. Create dark overlay ── */
+      var overlay = document.createElement('div');
+      overlay.id = 'mobile-nav-overlay';
+      document.body.appendChild(overlay);
+
+      /* ── 2. Create X close button inside the drawer ── */
+      var closeBtn = document.createElement('button');
+      closeBtn.id = 'mobile-nav-close';
+      closeBtn.setAttribute('aria-label', 'Close menu');
+      closeBtn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"' +
+        ' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<line x1="18" y1="6" x2="6" y2="18"></line>' +
+        '<line x1="6" y1="6" x2="18" y2="18"></line>' +
+        '</svg>';
+      mainNav.insertBefore(closeBtn, mainNav.firstChild);
+
+      /* ── 3. Open / close helpers ── */
+      function openMenu() {
+        mainNav.classList.add('active');
+        overlay.classList.add('active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; /* prevent scroll behind drawer */
+      }
+      function closeMenu() {
+        mainNav.classList.remove('active');
+        overlay.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        /* reset accordion */
+        mainNav.querySelectorAll('.sub-menu.mobile-open').forEach(function (m) { m.classList.remove('mobile-open'); });
+        mainNav.querySelectorAll('.mobile-chevron-btn.open').forEach(function (b) { b.classList.remove('open'); });
+      }
+
+      /* ── 4. Wire up toggle button ── */
+      mobileToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (mainNav.classList.contains('active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      /* ── 5. Wire up close button & overlay ── */
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      /* ── 6. Close if clicking outside on desktop ── */
+      document.addEventListener('click', function (e) {
+        if (!header.contains(e.target) && !mainNav.contains(e.target) && mainNav.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+
+      /* ── 7. Add chevron buttons to items with submenus ── */
+      var topLevelItems = mainNav.querySelectorAll(':scope > ul > li');
+
+      topLevelItems.forEach(function (li) {
+        var subMenu = li.querySelector(':scope > .sub-menu');
+        if (!subMenu) return;
+
+        var chevronBtn = document.createElement('button');
+        chevronBtn.className = 'mobile-chevron-btn';
+        chevronBtn.setAttribute('aria-label', 'Toggle submenu');
+        chevronBtn.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"' +
+          ' fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+          '<polyline points="6 9 12 15 18 9"></polyline>' +
+          '</svg>';
+
+        li.appendChild(chevronBtn);
+
+        chevronBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = subMenu.classList.contains('mobile-open');
+
+          /* Close all other open submenus */
+          mainNav.querySelectorAll('.sub-menu.mobile-open').forEach(function (m) { m.classList.remove('mobile-open'); });
+          mainNav.querySelectorAll('.mobile-chevron-btn.open').forEach(function (b) { b.classList.remove('open'); });
+
+          if (!isOpen) {
+            subMenu.classList.add('mobile-open');
+            chevronBtn.classList.add('open');
+          }
+        });
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
